@@ -14,9 +14,9 @@ const userSchema = joi.object({
 });
 
 app.post('/user', (req,res)=>{
-    const { error, value   } = userSchema.validate(req.body);
+    const { error, value   } = userSchema.validate(req.body)
   if (error) {
-    return res.status(400).send("invalid");
+    return res.status(400).send("invalid")
 }
 
 res.send("successfully")
