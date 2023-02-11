@@ -60,3 +60,4 @@ app.post('/data',(req,res)=>{
 })
 
 app.listen(3000)
+
