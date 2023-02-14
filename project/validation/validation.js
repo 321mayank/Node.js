@@ -1,5 +1,5 @@
 const joi = require('joi')
-const password = require('./custom_valid')
+const { password }= require('./custom_valid')
 
 
 
@@ -8,7 +8,7 @@ const register = {
     body: joi.object().keys({
       name: joi.string().required(),
       email: joi.string().required().email(),
-      password: joi.string().required(),
+      password: joi.string().required().custom(password),
       
     }),
   };
@@ -18,7 +18,7 @@ const register = {
 const login = {
     body: joi.object().keys({
       email: joi.string().required(),
-      password: joi.string().required(),
+      password: joi.string().required().custom(password),
     }),
   };
 
