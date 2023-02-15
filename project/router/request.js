@@ -34,8 +34,11 @@ router.get('/', (req, res) => { //rendered the login page
         connection_sql.query(insertQuery, (err, result) => {
           if (err) throw err;
           console.log("User data inserted successfully");
+        
+    
         });
         res.send(reg_data)
+        console.log(reg_data)
        })
       
   
