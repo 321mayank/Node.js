@@ -6,6 +6,7 @@ const { password }= require('./custom_valid')
 
 const register = {
     body: joi.object().keys({
+      id:joi.string().required(),
       name: joi.string().required(),
       email: joi.string().required().email(),
       password: joi.string().required().custom(password),
